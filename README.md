@@ -5,7 +5,7 @@ Just some wrappers to help generate commonly used bootstrap structures.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bootstrap_helpers', git: 'https://github.com/stoolan/bootstrap_helpers'
+gem 'bootstrap_helpers', git: 'https://github.com/stoolan/bootstrap_helpers.git'
 ```
 
 And then execute:
@@ -15,10 +15,20 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install https://github.com/stoolan/bootstrap_helpers
+$ gem install https://github.com/stoolan/bootstrap_helpers.git
 ```
 
 ## Usage
+
+### Generators
+
+Use the following command to add gems 
+
+```bash
+rails g boostrap
+```
+
+### Helpers
 
 The following Bootstrap helper functions are available:
 
