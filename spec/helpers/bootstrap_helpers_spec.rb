@@ -42,4 +42,21 @@ describe BootstrapHelpers, type: :helper do
     end}
     it { should == "<div class=\"alert alert-success\" role=\"alert\"><div class=\"peon\">Foo!</div></div>" }
   end
+
+  describe 'table with no options' do
+    subject { helper.bootstrap_table }
+    it { should == "<table class=\"table table-striped\"><thead><tr></tr></thead><tbody></tbody></table>" }
+  end
+  describe 'table with class options' do
+    subject { helper.bootstrap_table(class: "table table-striped table-bordered") }
+    it { should == "<table class=\"table table-striped table-bordered\"><thead><tr></tr></thead><tbody></tbody></table>" }
+  end
+  describe 'table with row options' do
+    subject { helper.bootstrap_table(rows: [[0, 1, 2], [3, 4, 5]]) }
+    it { should == "<table class=\"table table-striped\"><thead><tr></tr></thead><tbody><tr><td>0</td><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td><td>5</td></tr></tbody></table>" }
+  end
+  describe 'table with row/header options' do
+    subject { helper.bootstrap_table(headers: ["A", "B", "C"], rows: [[0, 1, 2], [3, 4, 5]]) }
+    it { should == "<table class=\"table table-striped\"><thead><tr><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><td>0</td><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td><td>5</td></tr></tbody></table>" }
+  end
 end

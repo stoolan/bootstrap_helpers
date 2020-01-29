@@ -57,9 +57,11 @@ module BootstrapHelpers
     }.merge(opts)
     content_tag(:table, class: opts[:class]) do
       concat(content_tag(:thead) do
-        opts.fetch(:headers, []).each do |header|
-          concat(content_tag(:th) { header })
-        end
+        concat(content_tag(:tr) do
+          opts.fetch(:headers, []).each do |header|
+            concat(content_tag(:th) { concat(header) })
+          end
+        end)
       end)
       concat(content_tag(:tbody) do
         if block_given?
@@ -68,7 +70,7 @@ module BootstrapHelpers
         opts.fetch(:rows, []).each do |row|
           concat(content_tag(:tr) do
             row.each do |cell|
-              concat(content_tag(:td) { cell })
+              concat(content_tag(:td) { concat(cell) })
             end
           end)
         end
