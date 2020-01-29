@@ -45,7 +45,13 @@ https://getbootstrap.com/docs/4.3/components/card/
 <%= bootstrap_card(title: "A Title", subtitle: "A Subtitle", text: "Some text") %>
 # yields
 
-<div class="card"><div class="card-body"><h3 class="card-title">A Title</h3><h4 class="card-subtitle mb-2 text-muted">A Subtitle</h4><div class="card-text">Some text</div></div></div>
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">A Title</h3>
+    <h4 class="card-subtitle mb-2 text-muted">A Subtitle</h4>
+    <div class="card-text">Some text</div>
+  </div>
+</div>
 
 # or
 
@@ -57,11 +63,17 @@ https://getbootstrap.com/docs/4.3/components/card/
 
 # yields
 
-<div class="card-body"><h3 class="card-title">A Title</h3><h4 class="card-subtitle mb-2 text-muted">A Subtitle</h4><div class="card-text">
-  <div class="my-custom-div">
-    Render this as HTML!
+<div class="card">
+  <div class="card-body">
+    <h3 class="card-title">A Title</h3>
+    <h4 class="card-subtitle mb-2 text-muted">A Subtitle</h4>
+    <div class="card-text">
+      <div class="my-custom-div">
+        Render this as HTML!
+      </div>
+    </div>
   </div>
-</div></div>
+</div>
 ```
 
 * **bootstrap_alert**
@@ -85,7 +97,9 @@ https://getbootstrap.com/docs/4.0/components/alerts/
 # yields
 
 
-<div class="alert alert-success" role="alert">An alert!</div>
+<div class="alert alert-success" role="alert">
+  An alert!
+</div>
 ```
 
 * **bootstrap_text**
@@ -108,7 +122,9 @@ https://getbootstrap.com/docs/4.0/utilities/colors/
 
 # yields
 
-<p class="text text-success">Success message</p>
+<p class="text text-success">
+  Success message
+</p>
 
 ```
 
@@ -120,7 +136,27 @@ https://getbootstrap.com/docs/4.0/content/tables/
 
 # yields
 
-<table class="table table-striped"><thead><tr><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><td>1</td><td>2</td><td>3</td></tr><tr><td>4</td><td>5</td><td>6</td></tr></tbody></table>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+  </tbody>
+</table>
 
 # or
 
@@ -138,7 +174,15 @@ https://getbootstrap.com/docs/4.0/content/tables/
 
 # yields
 
-<table class="table table-striped"><thead><tr><th>A</th><th>B</th><th>C</th></tr></thead><tbody>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+    </tr>
+  </thead>
+  <tbody>
     <tr>
         <td>
           1
@@ -161,7 +205,8 @@ https://getbootstrap.com/docs/4.0/content/tables/
           6
         </td>
     </tr>
-</tbody></table>
+  </tbody>
+</table>
 ```
 
 * **bootstrap_nav_tabs**
@@ -177,7 +222,14 @@ https://getbootstrap.com/docs/4.0/components/navs/
 
 # yields
 
-<ul class="nav nav-tabs"><li class="nav-item"><a class="nav-link" href="https://example.com">Some Link</a></li><li class="nav-item"><a class="nav-link active" href="/">Active Link</a></li></ul>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" href="https://example.com">Some Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="/">Active Link</a>
+  </li>
+</ul>
 ```
 
 ## Contributing
