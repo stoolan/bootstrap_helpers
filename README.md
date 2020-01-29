@@ -38,7 +38,7 @@ rails g fontawesome
 
 The following Bootstrap helper functions are available:
 
-* `bootstrap_card`
+* **bootstrap_card**
 https://getbootstrap.com/docs/4.3/components/card/
 
 ```erb
@@ -64,7 +64,7 @@ https://getbootstrap.com/docs/4.3/components/card/
 </div></div>
 ```
 
-* `bootstrap_alert`
+* **bootstrap_alert**
 https://getbootstrap.com/docs/4.0/components/alerts/
 
 ```erb
@@ -88,7 +88,7 @@ https://getbootstrap.com/docs/4.0/components/alerts/
 <div class="alert alert-success" role="alert">An alert!</div>
 ```
 
-* `bootstrap_text`
+* **bootstrap_text**
 https://getbootstrap.com/docs/4.0/utilities/colors/
 
 ```erb
@@ -112,7 +112,7 @@ https://getbootstrap.com/docs/4.0/utilities/colors/
 
 ```
 
-* `bootstrap_table`
+* **bootstrap_table**
 https://getbootstrap.com/docs/4.0/content/tables/
 
 ```erb
@@ -164,10 +164,10 @@ https://getbootstrap.com/docs/4.0/content/tables/
 </tbody></table>
 ```
 
-* `bootstrap_nav_tabs`
+* **bootstrap_nav_tabs**
 https://getbootstrap.com/docs/4.0/components/navs/
-  * `nav_link_class` -> helper method to add "active" class if `current_page?(link_url)` is truthy
-  * `nav_tab_link` -> helper method for nav tab link, uses nav link class
+  * **nav_link_class** -> helper method to add "active" class if `current_page?(link_url)` is truthy
+  * **nav_tab_link** -> helper method for nav tab link, uses nav link class
 
 ```erb
 <%= bootstrap_nav_tabs do |tabs| %>
