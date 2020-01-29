@@ -21,6 +21,34 @@ Or install it yourself as:
 $ gem install bootstrap_helpers
 ```
 
+## Usage
+
+The following Bootstrap helper functions are available:
+
+* bootstrap_card
+
+```erb
+<%= boostrap_card(title: "A Title", subtitle: "A Subtitle", text: "Some text") %>
+```
+
+or
+
+```erb
+<%= boostrap_card(title: "A Title", subtitle: "A Subtitle") do %>
+  <div class="my-custom-div">
+    Render this as HTML!
+  </div>
+<% end%>
+```
+
+* bootstrap_alert
+* bootstrap_text
+* bootstrap_table
+* nav_link_class
+* nav_tab_link
+* bootstrap_nav_tabs
+
+
 ## Contributing
 Contribution directions go here.
 
