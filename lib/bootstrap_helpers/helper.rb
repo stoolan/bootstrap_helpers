@@ -12,19 +12,19 @@ module BootstrapHelpers
       text_tag: :div,
       text_class: "card-text"
     }.merge(opts)
-      content_tag(:div, class: "card") do
-        concat(content_tag(:div, class: "card-body") do
-          concat(content_tag("h#{opts[:title_header]}", class: opts[:title_class]) { concat(opts[:title]) })
-          concat(content_tag("h#{opts[:subtitle_header]}", class: opts[:subtitle_class]) { concat(opts[:subtitle]) })
-          concat(content_tag(opts[:text_tag], class: opts[:text_class]) do
-            if block_given?
-              block.call
-            else
-              concat(opts[:text])
-            end
-          end)
+    content_tag(:div, class: "card") do
+    concat(content_tag(:div, class: "card-body") do
+        concat(content_tag("h#{opts[:title_header]}", class: opts[:title_class]) { concat(opts[:title]) })
+        concat(content_tag("h#{opts[:subtitle_header]}", class: opts[:subtitle_class]) { concat(opts[:subtitle]) })
+        concat(content_tag(opts[:text_tag], class: opts[:text_class]) do
+          if block_given?
+            block.call
+          else
+            concat(opts[:text])
+          end
         end)
-    end
+      end)
+  end
   end
   def bootstrap_alert(opts = {}, &block)
     opts = {

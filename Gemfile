@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # Declare your gem's dependencies in bootstrap_helpers.gemspec.
@@ -13,5 +13,7 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
-gem 'pry', group: [:development, :test]
-gem 'rspec-rails', group: [:development, :test]
+gem "pry", group: [:development, :test]
+gem "rspec-rails", group: [:development, :test]
+gem "rubocop-rails", group: [:development, :test]
+gem "rubocop-performance", group: [:development, :test]
