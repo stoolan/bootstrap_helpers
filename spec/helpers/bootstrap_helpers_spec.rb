@@ -59,4 +59,15 @@ describe BootstrapHelpers, type: :helper do
     subject { helper.bootstrap_table(headers: ["A", "B", "C"], rows: [[0, 1, 2], [3, 4, 5]]) }
     it { should == "<table class=\"table table-striped\"><thead><tr><th>A</th><th>B</th><th>C</th></tr></thead><tbody><tr><td>0</td><td>1</td><td>2</td></tr><tr><td>3</td><td>4</td><td>5</td></tr></tbody></table>" }
   end
+
+  describe 'nav tabs' do
+    def current_page? x
+      true
+    end
+    subject { helper.bootstrap_nav_tabs do |tabs|
+      tabs << nav_tab_link('Something', 'a_url')
+      tabs << nav_tab_link('Something Else', 'a_url2')
+    end}
+    it { should == "<ul class=\"nav nav-tabs\"><li class=\"nav-item\"><a class=\"nav-link active\" href=\"a_url\">Something</a></li><li class=\"nav-item\"><a class=\"nav-link active\" href=\"a_url2\">Something Else</a></li></ul>" }
+  end
 end
