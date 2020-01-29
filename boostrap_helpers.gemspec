@@ -1,12 +1,12 @@
 $:.push File.expand_path("lib", __dir__)
 
 # Maintain your gem's version:
-require "boostrap_helpers/version"
+require "bootstrap_helpers/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
-  spec.name        = "boostrap_helpers"
-  spec.version     = BoostrapHelpers::VERSION
+  spec.name        = "bootstrap_helpers"
+  spec.version     = BootstrapHelpers::VERSION
   spec.authors     = ["stoolan"]
   spec.email       = ["stoolan@telegeography.com"]
   spec.homepage    = "https://github.com/stoolan/bootstrap_helpers"
@@ -28,4 +28,5 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rails", "~> 6.0.2", ">= 6.0.2.1"
 
   spec.add_development_dependency "sqlite3"
+  spec.add_development_dependency('rspec-rails', '~> 3.7')
 end

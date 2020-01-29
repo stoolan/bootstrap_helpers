@@ -1,4 +1,4 @@
-# BoostrapHelpers
+# BootstrapHelpers
 Short description and motivation.
 
 ## Usage
@@ -8,7 +8,7 @@ How to use my plugin.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'boostrap_helpers'
+gem 'bootstrap_helpers'
 ```
 
 And then execute:
@@ -18,7 +18,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install boostrap_helpers
+$ gem install bootstrap_helpers
 ```
 
 ## Contributing
