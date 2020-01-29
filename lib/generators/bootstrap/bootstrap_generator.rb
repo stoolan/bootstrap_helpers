@@ -1,12 +1,12 @@
 class BootstrapGenerator < Rails::Generators::Base
-  source_root File.expand_path('templates', __dir__)
+  source_root File.expand_path("templates", __dir__)
 
   def add_bootstrap_gem
-    gem 'bootstrap', version: '~>4.3.1'
+    gem "bootstrap", version: "~>4.3.1"
   end
 
   def add_scss_import
-    if File.exists?("#{Rails.root}/app/assets/stylesheets/application.css")
+    if File.exist?("#{Rails.root}/app/assets/stylesheets/application.css")
       remove_file "#{Rails.root}/app/assets/stylesheets/application.css"
       create_file "#{Rails.root}/app/assets/stylesheets/application.scss"
     end
@@ -17,15 +17,15 @@ class BootstrapGenerator < Rails::Generators::Base
 
   def update_webpack
     [
-      ['jquery', '^3.4.1'],
-      ['bootstrap', '4.3.1'],
-      ['popper.js', '^1.16.0']
+      ["jquery", "^3.4.1"],
+      ["bootstrap", "4.3.1"],
+      ["popper.js", "^1.16.0"]
     ].each do |lib, version|
       inject_into_file "#{Rails.root}/package.json", after: '"dependencies": {' do
         "\n    \"#{lib}\": \"#{version}\","
       end
     end
-    rake 'yarn:install'
+    rake "yarn:install"
   end
 
   def add_js_pack

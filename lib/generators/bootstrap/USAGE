@@ -1,8 +1,13 @@
 Description:
-    Explain the generator
+    Add dependencies for bootstrap
 
 Example:
-    rails generate bootstrap Thing
+    rails generate bootstrap
 
     This will create:
-        what/will/it/create
+      add gem 'bootstrap'
+      add @import "bootstrap"; >> application.scss
+      add jquery, popper, bootstrap >> package.json
+      yarn install
+      add require('bootstrap') >> application.js
+      make jquery avilable in environment.js
