@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.version     = BoostrapHelpers::VERSION
   spec.authors     = ["stoolan"]
   spec.email       = ["stoolan@telegeography.com"]
-  spec.homepage    = "TODO"
+  spec.homepage    = "https://github.com/stoolan/bootstrap_helpers"
   spec.summary     = "Helpful snippets for Bootstrap 4 / Rails development."
   spec.description = "Helpful snippets for Bootstrap 4 / Rails 6 development."
   spec.license     = "MIT"
