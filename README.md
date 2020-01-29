@@ -1,14 +1,11 @@
-# BootstrapHelpers
-Short description and motivation.
-
-## Usage
-How to use my plugin.
+# Bootstrap Helpers
+Just some wrappers to help generate commonly used bootstrap structures.
 
 ## Installation
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'bootstrap_helpers'
+gem 'bootstrap_helpers', git: 'https://github.com/stoolan/bootstrap_helpers'
 ```
 
 And then execute:
@@ -18,7 +15,7 @@ $ bundle
 
 Or install it yourself as:
 ```bash
-$ gem install bootstrap_helpers
+$ gem install https://github.com/stoolan/bootstrap_helpers
 ```
 
 ## Usage
