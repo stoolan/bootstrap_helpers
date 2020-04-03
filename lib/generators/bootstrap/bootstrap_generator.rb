@@ -26,6 +26,7 @@ class BootstrapGenerator < Rails::Generators::Base
       end
     end
     rake "yarn:install"
+    `yarn add expose-loader`
   end
 
   def add_js_pack
